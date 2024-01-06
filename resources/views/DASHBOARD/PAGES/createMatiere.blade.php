@@ -1,0 +1,5 @@
+@extends('DASHBOARD.LAYOUTS.matiere.baseCreateMatiere')
+@yield('header')
+@yield('sidebar')
+@yield('contenu')
+@yield('footer')
