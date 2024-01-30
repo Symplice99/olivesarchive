@@ -8,34 +8,16 @@
 
 <body style="background: rgba(233, 236, 239, 1);">
 
-<!-- Header START -->
-<header class="navbar-light navbar-sticky">
-    @section('header')<!--nom section-->
-            @include('SITE.header')
-    @show
-</header>
-<!-- Header END -->
+
 
 <main>
 @section('contenu')<!--nom section-->
-    @include('SITE.LAYOUTS.accueil.contentAccueil')
+    @include('SITE.LAYOUTS.accueil.contentAccueilCoursDetail')
 @show
 </main>
 
 
-<!-- =======================
-Footer START -->
-<footer id="footer" class="footer">
-    @section('footer')<!--nom section-->
-        @include('SITE.footer')
-    @show
-</footer><!-- End Footer -->
 
-
-<!-- =======================
-Footer END -->
-
-<!-- Back to top -->
 <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
 
 

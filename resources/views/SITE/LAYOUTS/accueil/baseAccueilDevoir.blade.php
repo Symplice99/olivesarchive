@@ -16,11 +16,39 @@
 </header>
 <!-- Header END -->
 
-<main>
-@section('contenu')<!--nom section-->
-    @include('SITE.LAYOUTS.accueil.contentAccueil')
-@show
-</main>
+<section class="py-0 py-xl-5">
+    <div class="container">
+        <div class="row">
+            {{-- les compteurs --}}
+            <div class="col-lg-9">
+                @section('compteur')
+                    <div class="w-100">
+                        @include('SITE.compteur')
+                    </div>
+                @show
+
+                <hr class="bg-secondary">
+                {{-- Cours --}}
+                <div class="row g-4">
+                    @section('contenu')
+                        <div class="w-100">
+                            @include('SITE.LAYOUTS.accueil.contentAccueilDevoir')
+                        </div>
+                    @show
+                </div>
+            </div>
+
+        </div>
+        {{-- Domaine --}}
+        <div class="col-lg-3">
+            @section('domaine')
+                <div class="w-100">
+                    @include('SITE.domaine')
+                </div>
+            @show
+        </div>
+    </div>
+</section>
 
 
 <!-- =======================

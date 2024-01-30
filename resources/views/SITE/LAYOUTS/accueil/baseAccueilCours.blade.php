@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <!-- Mirrored from eduport.webestica.com/index-9.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Mar 2023 13:48:31 GMT -->
 <head>
@@ -16,13 +16,39 @@
 </header>
 <!-- Header END -->
 
-<main>
-@section('contenu')<!--nom section-->
-    @include('SITE.LAYOUTS.accueil.contentAccueil')
-@show
-</main>
+<section class="py-0 py-xl-5">
+    <div class="container">
+        <div class="row">
+            {{-- les compteurs --}}
+            <div class="col-lg-9">
+                @section('compteur')
+                    <div class="w-100">
+                        @include('SITE.compteur')
+                    </div>
+                @show
 
+                {{-- Cours --}}
+                <div class="row g-4">
+                    @section('contenu')
+                        <div class="w-100">
+                            <hr class=" bg-secondary">
+                            @include('SITE.LAYOUTS.accueil.contentAccueilCours')
+                        </div>
+                    @show
+                </div>
+            </div>
 
+        </div>
+        {{-- Domaine --}}
+        <div class="col-lg-3">
+            @section('domaine')
+                <div class="w-100">
+                    @include('SITE.domaine')
+                </div>
+            @show
+        </div>
+    </div>
+</section>
 <!-- =======================
 Footer START -->
 <footer id="footer" class="footer">

@@ -36,6 +36,7 @@
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
   <link href="{{asset('all.min.css')}}" rel="stylesheet">
+  <link href="{{asset('assets/all.min.css')}}" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <!-- Bootstrap CSS -->
@@ -46,6 +47,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+{{-- <!-- Inclure PDF.js --> --}}
+<link rel="stylesheet" href="https://mozilla.github.io/pdf.js/build/pdf_viewer.css" onerror="console.error('Erreur lors du chargement du fichier CSS de PDF.js')">
+<script src="https://mozilla.github.io/pdf.js/build/pdf.js" onerror="console.error('Erreur lors du chargement du fichier JS de PDF.js')"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
 
 {{-- <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
@@ -54,3 +61,7 @@
 
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css"> --}}
+
+    {{--Inclure FedaPay  --}}
+    <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
+

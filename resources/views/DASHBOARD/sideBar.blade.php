@@ -118,8 +118,8 @@
       </a>
     </li><!-- End Profile Page Nav -->
 
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="#">
+    <li {{Route::currentRouteName()=='accueils.indexAccueil'? 'active':''}} class="nav-item">
+      <a class="nav-link collapsed" href="{{route('accueils.indexAccueil')}}">
         <i class="ri-home-2-fill"></i>
         <span>Accueil</span>
       </a>

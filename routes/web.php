@@ -10,6 +10,8 @@ use App\Http\Controllers\EpreuveController;
 use App\Http\Controllers\ExerciceController;
 use App\Http\Controllers\MatiereController;
 use App\Http\Controllers\NiveauController;
+use App\Http\Controllers\PaiementController;
+use App\Http\Controllers\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,3 +115,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/layout/corrections/edit/{id}',[CorrectionController::class, 'edit'])->name('corrections.edit');
     Route::put('/admin/layout/corrections/update/{id}',[CorrectionController::class, 'update'])->name('corrections.update');
 });
+
+//routes de accueil
+Route::get('/site/layout/accueil/',[SiteController::class, 'indexAccueil'])->name('accueils.indexAccueil');
+Route::get('/site/layout/accueil2/',[SiteController::class, 'indexAccueilCours'])->name('accueils.indexAccueilCours');
+Route::get('/site/layout/accueil3/',[SiteController::class, 'indexAccueilDevoir'])->name('accueils.indexAccueilDevoir');
+Route::get('/site/layout/accueil4/',[SiteController::class, 'indexAccueilDevoir2'])->name('accueils.indexAccueilDevoir2');
+Route::get('/site/layout/accueil5/{id}',[SiteController::class, 'indexAccueilCoursDetail'])->name('accueils.indexAccueilCoursDetail');
+Route::get('/site/layout/accueil6/{id}',[SiteController::class, 'indexAccueilDevoirDetail'])->name('accueils.indexAccueilDevoirDetail');
+Route::get('/site/layout/accueil7/{id}',[SiteController::class, 'indexAccueilDevoirDetail2'])->name('accueils.indexAccueilDevoirDetail2');
+
+Route::middleware('auth')->group(function () {
+    Route::post('/fedapay-webhookCours', [PaiementController::class, 'webhook'])->name('fedapay.webhook');
+    // Route::post('/fedapay-webhookEpreuve', [PaiementController::class, 'webhook2'])->name('fedapay.webhook2');
+});
+

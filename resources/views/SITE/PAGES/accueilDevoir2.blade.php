@@ -1,0 +1,6 @@
+@extends('SITE.LAYOUTS.accueil.baseAccueilDevoir2')
+@yield('header')
+@yield('compteur')
+@yield('contenu')
+@yield('domaine')
+@yield('footer')

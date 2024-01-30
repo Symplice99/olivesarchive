@@ -35,6 +35,12 @@ use Illuminate\Support\Facades\DB;
         return $corrections;
     }
 
+    function getDomaine(){
+        $domaines=Domaine::all();
+        //dd($corrections);
+        return $domaines;
+    }
+
     function countNiveau(){
         $cn=Niveau::count();
         //dd($cn);
